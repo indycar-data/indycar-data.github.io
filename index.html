@@ -404,7 +404,7 @@
         <a class="back-link">INDYCAR Data Analysis</a>
         <span class="season-tag">2026 Season</span>
     </div>
-    <h1>2026 Borchetta Bourbon Music City Grand Prix</h1>
+    <h1>Borchetta Bourbon Music City Grand Prix</h1>
 </div>
 
 <div class="wrap">
@@ -3346,7 +3346,7 @@
     });
 
     // --- Zoom / Pan interactivity ---
-    // Scroll or pinch to zoom, drag to pan, double-click (or the Reset Zoom
+    // Scroll to zoom, drag to pan, double-click (or the Reset Zoom
     // button) to return to the original view. Mirrors the interaction model
     // from https://observablehq.com/@d3/zoomable-bar-chart, adapted for a
     // multi-line chart: on every zoom event we rescale both axes and redraw
@@ -3436,7 +3436,7 @@
         .attr("y", -20)
         .style("fill", "#6b7280")
         .style("font-style", "italic")
-        .text("Scroll/pinch to zoom, drag to pan, double-click to reset");
+        .text("Scroll to zoom, drag to pan, double-click to reset");
 
     // The in-progress/last-drawn selection box
     const selectionRect = svg.append("rect")
@@ -3614,7 +3614,7 @@
             compareButtonRect.attr("fill", "#e3e6ea").attr("stroke", "#c7cbd1");
             compareButtonText.text("Compare Laps");
             hintText.style("display", null)
-                .text("Scroll/pinch to zoom, drag to pan, double-click to reset");
+                .text("Scroll to zoom, drag to pan, double-click to reset");
         }
     }
 
@@ -4213,7 +4213,7 @@
             if (car === mostConsistentCar) tags.push("(^)");
             if (car === slowestCar) tags.push("(-)");
             if (car === leastConsistentCar) tags.push("(*)");
-            const label = `${shortDriverLabel(car)} ${tags.join(" ")}`.trim();
+            const label = `${shortDriverLabel(car)}${tags.join("")}`.trim();
             const px = csX(d.mean), py = csY(d.std);
             const w = label.length * 6.3 + 6;
             const h = 14;
